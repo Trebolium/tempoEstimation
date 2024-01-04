@@ -1,4 +1,27 @@
-# tempoEstimationTask
+# Usage
+
+In order to use the tempo estimator, this package and its dependencies must be installed with pip. It is recommended to do so in a virtualenv as follows:
+
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+The dependencies can then be installed like so*:
+```bash
+pip install -r requirements.txt
+```
+
+Once this is done, the jupyter notebooks can be used.
+
+`data_processing.ipynb` is to be run first. Make sure to change the first two variables in the third cell, named `data_dir` and `dst_dir`, to ensure files can be succesfully located and generated in the appropriate directories.
+
+`dsp_modelling.ipynb` is to be run second. Similar to the first notebook, in the third cell the varialbes `feats_dir` and `beats_dir` must be set to succesfully extract features and beat text files.
+
+The pipeline of raw data to tempo estimaation should be clear. However, satisfactory results were not achieved within the given time frame, as the optimum model performance wasa said not to be the goal of this exercise. Global variable parameter experimentation should lead us to better results.
+
+
+# tempoEstimationTask Notes 
 
 ## Task Description
 Consider entire song before detecting beat
@@ -51,7 +74,7 @@ Augmentation of time-strectching might be useful
     -   Artefacts may arise on edges of audio clips
     -   Silent/implied beats may misguide algorithm
 
-## NN-model literature
+# NN-model literature
 
 Good resource: https://tempobeatdownbeat.github.io/tutorial/intro.html
 
@@ -90,7 +113,7 @@ Good resource: https://tempobeatdownbeat.github.io/tutorial/intro.html
 -   329-d hand-crafted feature set from [15], which comprises chroma features, onset strengths, low-frequency spectral features, and melodic constant-Q spectral features. These did NOT improve results
 -   F1 score 81 (bock was 79).
 
-#### Use Boch's solution, based on:
+#### If using NN model, use Boch's solution, based on:
     Assess gain against risk
     Feasibilty of getting up and running
     Modularity
@@ -102,4 +125,4 @@ Good resource: https://tempobeatdownbeat.github.io/tutorial/intro.html
         Reduces difficulty-gain trade-off
         Modular Training
     boch2019
-        https://github.com/CPJKU/madmom
+        Many promising implementations of this model available online
