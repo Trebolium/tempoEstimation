@@ -90,12 +90,12 @@ Good resource: https://tempobeatdownbeat.github.io/tutorial/intro.html
 -   329-d hand-crafted feature set from [15], which comprises chroma features, onset strengths, low-frequency spectral features, and melodic constant-Q spectral features. These did NOT improve results
 -   F1 score 81 (bock was 79).
 
-## Based on these findings
+#### Use Boch's solution, based on:
     Assess gain against risk
     Feasibilty of getting up and running
     Modularity
     Seems like beat-tracking would not go to waste, given Hooks product
-        Would act as a stepping stone towards tempo estimation (which might be the easier bit)
+        Would act as a stepping stone towards tempo estimation (which might be the easier)
     Quinton2022
         results sometimes better than Bock
         Coode available intigating head start
@@ -103,4 +103,3 @@ Good resource: https://tempobeatdownbeat.github.io/tutorial/intro.html
         Modular Training
     boch2019
         https://github.com/CPJKU/madmom
-
